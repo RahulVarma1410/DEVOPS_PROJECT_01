@@ -13,13 +13,35 @@
   </header>
 
   <main>
-    <section class="card">
+
+    <!-- Welcome Card (initial view) -->
+    <section class="card" id="welcomeCard">
       <h2>Welcome!</h2>
       <p>Idi naa first simple web application starter template.</p>
       <p>Ippudu HTML5 structure correct ga raayabadindi.</p>
       <button id="actionBtn">Click Me</button>
       <p id="output"></p>
     </section>
+
+    <!-- Login Card (hidden until button click) -->
+    <section class="card hidden" id="loginCard">
+      <h2>Login</h2>
+      <p>Kripaya mee username and password ivvandi.</p>
+
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" autocomplete="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" autocomplete="current-password" required>
+
+        <button type="submit" id="loginBtn">Login</button>
+      </form>
+
+      <p id="loginOutput"></p>
+      <button id="backBtn" class="link">← Back</button>
+    </section>
+
   </main>
 
   <footer>

@@ -1,89 +1,157 @@
-/* ====== Base Reset ====== */
+:root {
+  --primary: #4a9eed;
+  --primary-dark: #1e3a8a;
+  --bg: #f5f8fc;
+  --card-bg: #ffffff;
+  --text: #1e1e1e;
+  --muted: #666;
+  --danger: #ef4444;
+  --radius: 12px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: system-ui, "Segoe UI", sans-serif;
 }
 
-/* ====== Page Body ====== */
 body {
-  background: #f4f7fb;
-  color: #2a2a2a;
-  line-height: 1.6;
-  letter-spacing: 0.2px;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ====== Header ====== */
 header {
-  background: linear-gradient(135deg, #4a9eed 0%, #6b5ff6 100%);
-  color: white;
-  padding: 28px 20px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  font-size: 24px;
 }
 
-/* ====== Main Content ====== */
 main {
-  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+  gap: 20px;
 }
 
-/* ====== Card ====== */
-card {
-  background: white;
-  border-radius: 16px;
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   padding: 28px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  max-width: 540px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
 }
 
-/* ====== Headings ====== */
-h2 {
+.card h2 {
+  margin-bottom: 12px;
+  color: var(--primary-dark);
   font-size: 22px;
+}
+
+.card p {
+  margin-bottom: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* Inputs */
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--text);
   font-weight: 600;
-  color: #1e40af;
-  margin-bottom: 14px;
-  letter-spacing: 0.3px;
 }
 
-/* ====== Paragraph ====== */
-p {
-  font-size: 17px;
-  color: #333333;
-  line-height: 1.7;
-  margin-bottom: 14px;
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d7e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
 }
 
-/* ====== Button ====== */
+input:focus {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 0 3px rgba(74,158,237,0.15);
+}
+
+/* Buttons */
 button {
-  background: #4a9eed;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 22px;
   cursor: pointer;
-  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 15px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(74,158,237,0.35);
-  transition: all 0.25s;
+  transition: 0.2s;
 }
 
-button:hover {
-  background: #2d7fd1;
-  box-shadow: 0 6px 18px rgba(74,158,237,0.5);
+#actionBtn, #loginBtn {
+  background: var(--primary);
+  color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
 }
 
-/* ====== Footer ====== */
+#actionBtn:hover, #loginBtn:hover {
+  background: var(--primary-dark);
+}
+
+.link {
+  background: transparent;
+  color: var(--primary);
+  margin-top: 14px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Output messages */
+#output, #loginOutput {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+
+.error {
+  color: var(--danger);
+}
+
+/* Footer */
 footer {
+  padding: 20px;
   text-align: center;
-  padding: 22px;
-  color: #777;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Thank You */
+.thankyou {
+  text-align: center;
+  padding: 24px 16px;
+  background: #eef4fc;
+  color: var(--primary-dark);
   font-size: 14px;
 }
