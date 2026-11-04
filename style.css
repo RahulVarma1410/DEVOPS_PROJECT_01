@@ -6,6 +6,7 @@
   --text: #1e1e1e;
   --muted: #666;
   --danger: #ef4444;
+  --success: #22c55e;
   --radius: 12px;
 }
 
@@ -20,8 +21,6 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 header {
@@ -41,7 +40,6 @@ main {
   align-items: center;
   justify-content: center;
   padding: 30px 16px;
-  gap: 20px;
 }
 
 .card {
@@ -65,7 +63,7 @@ main {
   line-height: 1.5;
 }
 
-/* Hidden state */
+/* Hidden screan state */
 .hidden {
   display: none;
 }
@@ -105,14 +103,14 @@ button {
   transition: 0.2s;
 }
 
-#actionBtn, #loginBtn {
+#actionBtn, #loginBtn, #retryBtn {
   background: var(--primary);
   color: #ffffff;
   width: 100%;
   margin-top: 20px;
 }
 
-#actionBtn:hover, #loginBtn:hover {
+#actionBtn:hover, #loginBtn:hover, #retryBtn:hover {
   background: var(--primary-dark);
 }
 
@@ -128,14 +126,8 @@ button {
   text-decoration: underline;
 }
 
-/* Output messages */
-#output, #loginOutput {
-  margin-top: 14px;
-  font-size: 14px;
-  color: var(--primary-dark);
-}
-
-.error {
+/* Error card wording */
+#errorCard h2 {
   color: var(--danger);
 }
 

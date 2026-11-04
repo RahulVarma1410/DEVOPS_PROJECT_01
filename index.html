@@ -14,16 +14,15 @@
 
   <main>
 
-    <!-- Welcome Card (initial view) -->
+    <!-- SCREAN 1: Welcome -->
     <section class="card" id="welcomeCard">
       <h2>Welcome!</h2>
       <p>Idi naa first simple web application starter template.</p>
       <p>Ippudu HTML5 structure correct ga raayabadindi.</p>
       <button id="actionBtn">Click Me</button>
-      <p id="output"></p>
     </section>
 
-    <!-- Login Card (hidden until button click) -->
+    <!-- SCREAN 2: Login -->
     <section class="card hidden" id="loginCard">
       <h2>Login</h2>
       <p>Kripaya mee username and password ivvandi.</p>
@@ -38,8 +37,15 @@
         <button type="submit" id="loginBtn">Login</button>
       </form>
 
-      <p id="loginOutput"></p>
       <button id="backBtn" class="link">← Back</button>
+    </section>
+
+    <!-- SCREAN 3: Invalid Credentials -->
+    <section class="card hidden" id="errorCard">
+      <h2>Invalid Credentials</h2>
+      <p>Mee username or password tappu ga undi.</p>
+      <p>Kripaya malli try cheyandi.</p>
+      <button id="retryBtn">Retry Login</button>
     </section>
 
   </main>
